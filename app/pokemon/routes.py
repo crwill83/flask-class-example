@@ -27,8 +27,12 @@ def addToPokedex():
 
         poke_name = name
         image = my_data['sprites']['front_default']
-        ability1 = my_abilities[0]
-        ability2 = my_abilities[1]
+        if len(my_abilities) == 2:
+            ability1 = my_abilities[0]
+            ability2 = my_abilities[1]
+        elif len(my_abilities) == 1:
+            ability1 = my_abilities[0]
+            ability2 = ''
 
 
         pokemon = Pokemon(poke_name, image, ability1, ability2)
