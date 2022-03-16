@@ -8,8 +8,16 @@
     <div class="card-body">
         <h5 class="card-title">{{ p.name.title() }}</h5>
         <ul>
+            {% if p.ability3 == 'none' and p.ability2 == 'none' %}
+            <li>{{ p.ability1.title() }}</li>
+            {% elif p.ability3 == 'none' %}
             <li>{{ p.ability1.title() }}</li>
             <li>{{ p.ability2.title() }}</li>
+            {% else %}
+            <li>{{ p.ability1.title() }}</li>
+            <li>{{ p.ability2.title() }}</li>
+            <li>{{ p.ability3.title() }}</li>
+            {% endif %}
         </ul>
     </div>
 </div>

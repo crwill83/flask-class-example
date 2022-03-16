@@ -74,9 +74,11 @@ class Pokemon(db.Model):
     image = db.Column(db.String(300))
     ability1 = db.Column(db.String(300))
     ability2 = db.Column(db.String(300))    
+    ability3 = db.Column(db.String(300))
 
-    def __init__(self, name, image, ability1, ability2):
+    def __init__(self, name, image, ability1, ability2, ability3):
         self.name = name
         self.image = image
         self.ability1 = ability1
         self.ability2 = ability2
+        self.ability3 = ability3

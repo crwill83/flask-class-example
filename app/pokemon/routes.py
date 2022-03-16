@@ -27,15 +27,22 @@ def addToPokedex():
 
         poke_name = name
         image = my_data['sprites']['front_default']
-        if len(my_abilities) == 2:
+        
+        if (my_abilities) == 3:
             ability1 = my_abilities[0]
             ability2 = my_abilities[1]
+            ability3 = my_abilities[2]
+        elif len(my_abilities) == 2:
+            ability1 = my_abilities[0]
+            ability2 = my_abilities[1]
+            ability3 = 'none'
         elif len(my_abilities) == 1:
             ability1 = my_abilities[0]
-            ability2 = ''
+            ability2 = 'none'
+            ability3 = 'none'
 
 
-        pokemon = Pokemon(poke_name, image, ability1, ability2)
+        pokemon = Pokemon(poke_name, image, ability1, ability2, ability3)
 
         # check for pokemon already in database and only adds new pokemon
         if Pokemon.query.filter_by(name=poke_name).first():
