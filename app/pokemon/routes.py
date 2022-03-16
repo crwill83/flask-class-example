@@ -46,6 +46,7 @@ def addToPokedex():
 @pokemon.route('/pokemon', methods=["POST"])
 def myPokemon():
     name = request.form.to_dict()['name']
+    name = name.lower().strip()
     data = r.get(f"https://pokeapi.co/api/v2/pokemon/{name}")
     if data.status_code == 200:
         my_data = data.json()
