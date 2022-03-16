@@ -2,8 +2,25 @@
   margin-top: 5px;
 }
 
-#card img:hover {
+.abilities {
+  text-decoration: underline;
+}
+
+.card-title {
+  background-color: rgb(247, 197, 11);
+  border-radius: 10px;
+  border: 3px solid rgb(12, 67, 120);
+  padding: 5px;
+  box-shadow:
+       inset 0 -2em 2em rgba(0,0,0,0.1),
+             0 0  0 1px rgb(255,255,255),
+             0.3em 0.3em 1em rgba(0,0,0,0.3);
+}
+
+#card:hover > .card-img-top {
   transform: scale(1.15);
+  transition: all .3s ease-in-out;
+
 }
 
 #card {
@@ -17,7 +34,7 @@
        inset 0 -3em 3em rgba(0,0,0,0.1),
              0 0  0 2px rgb(255,255,255),
              0.3em 0.3em 1em rgba(0,0,0,0.3);
-  padding:20px;
+  padding-top:10px;
 }
 
 #card img {
@@ -25,8 +42,14 @@
   transition: all .3s ease-in-out;
 }
 
+#card ul {
+  text-align: center;
+  list-style-type: none;
+  list-style: none;
+  padding-left: 0px;
+}
+
 #card li {
-  text-align: left;
 }
 
 .sign-up-container {  display: grid;

@@ -2,11 +2,12 @@
 
 {% block content %}
 
-<div class="card" style="width: 18rem;">
+<div id="card" class="card" style="width: 18rem; display: flex; align-content: center; margin: auto;">
     <img src="{{ img_url }}" class="card-img-top" alt="{{ name }}">
     <div class="card-body">
-        <h5 class="card-title">{{ name }}</h5>
+        <h4 class="card-title">{{ name }}</h4>
         <ul>
+            <h5 class="abilities">Abilities</h5>
             {% for a in abilities %}
                 <li>{{ a }}</li>       
             {% endfor %}

@@ -6,8 +6,9 @@
 <div id="card" class="card" style="width: 18rem;">
     <img src="{{ p.image }}" class="card-img-top" alt="{{ p.name }}">
     <div class="card-body">
-        <h5 class="card-title">{{ p.name.title() }}</h5>
+        <h4 class="card-title">{{ p.name.title() }}</h4>
         <ul>
+            <h5 class="abilities">Abilities</h5>
             {% if p.ability3 == 'none' and p.ability2 == 'none' %}
             <li>{{ p.ability1.title() }}</li>
             {% elif p.ability3 == 'none' %}
