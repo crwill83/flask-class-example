@@ -6,6 +6,7 @@ from flask_login import UserMixin
 
 db = SQLAlchemy()
 
+
 # create our Models based off of our ERD
 class User(db.Model, UserMixin):
     id = db.Column(db.Integer, primary_key=True)
